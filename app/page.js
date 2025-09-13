@@ -1,52 +1,67 @@
 "use client";
 
 import { useEffect } from "react";
+import Script from "next/script";
 
 export default function Home() {
-
- useEffect(() => {
+  useEffect(() => {
     // Dynamically add Google Fonts link
     const link = document.createElement("link");
-    link.href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap";
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap";
     link.rel = "stylesheet";
     document.head.appendChild(link);
   }, []);
-  
+
   return (
-    <main style={{
+    <main
+      style={{
         fontFamily: "'Open Sans', sans-serif",
         textAlign: "center",
         padding: "50px",
-      }}>
+      }}
+    >
 
-<img
-        src="/nganyaa.png" // keep your app icon in /public/nganya.png
+      <img
+        src="/nganyaa.png" // keep your app icon in /public/nganyaa.png
         alt="Nganya App Icon"
         style={{
-          width: "150px",         // bigger size
+          width: "150px",
           height: "150px",
-          borderRadius: "20%",    // makes it perfectly round
+          borderRadius: "20%", // rounded edges
           marginBottom: "20px",
-          objectFit: "cover",     // keeps aspect ratio nice inside circle
+          objectFit: "cover",
         }}
       />
-  
+
       <h1>Nganya</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
 
       <a
-        href="https://play.google.com/store/apps/details?id=com.nganya.mobile" 
+        href="https://play.google.com/store/apps/details?id=com.nganya.mobile"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-    alt="Google Play"
-    className="w-6 h-6"
-  />
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Google Play"
+          style={{ width: "180px", marginTop: "20px" }}
+        />
       </a>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898929858071696"
+     crossorigin="anonymous"></script>
+<!-- Home Landing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7898929858071696"
+     data-ad-slot="3462861886"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+         
     </main>
-
-
   );
 }
