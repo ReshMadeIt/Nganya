@@ -1,6 +1,21 @@
+import { useEffect } from "react";
+
 export default function Home() {
+
+ useEffect(() => {
+    // Dynamically add Google Fonts link
+    const link = document.createElement("link");
+    link.href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  }, []);
+  
   return (
-    <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "50px" }}>
+    <main style={{
+        fontFamily: "'Open Sans', sans-serif",
+        textAlign: "center",
+        padding: "50px",
+      }}>
 
 <img
         src="/nganyaa.png" // keep your app icon in /public/nganya.png
@@ -14,7 +29,7 @@ export default function Home() {
         }}
       />
   
-      <h1>Nganya 🚐</h1>
+      <h1>Nganya</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
 
       <a
