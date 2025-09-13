@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+//import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -12,13 +12,13 @@ export default function Home() {
         rel="noopener noreferrer"
       >
         <img
-          src="/google-play-badge.png"
+          src="/google-play.png"
           alt="Get it on Google Play"
           width={200}
         />
       </a>
-            {/* Footer (no need to enclose again) */}
-      <Footer />
+    //        {/* Footer (no need to enclose again) */}
+  //    <Footer />
     </main>
 
 
