@@ -1,5 +1,3 @@
-//import Footer from "../components/Footer";
-
 export default function Home() {
   return (
     <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "50px" }}>
@@ -17,8 +15,6 @@ export default function Home() {
           width={200}
         />
       </a>
-    //        {/* Footer (no need to enclose again) */}
-  //    <Footer />
     </main>
 
 
