@@ -5,7 +5,7 @@ export default function Home() {
       <p>Your ultimate matatu culture app – now on Google Play!</p>
 
       <a
-        href="https://play.google.com/store/apps/details?id=com.yourapp" 
+        href="https://play.google.com/store/apps/details?id=com.nganya.mobile" 
         target="_blank"
         rel="noopener noreferrer"
       >
