@@ -1,6 +1,11 @@
 export const metadata = {
   title: "Nganya",
   description: "Your ultimate matatu culture app – now on Google Play!",
+  icons: {
+    icon: "/nganyaa.png",
+    shortcut: "/nganyaa.png",
+    apple: "/nganyaa.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -12,3 +17,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
