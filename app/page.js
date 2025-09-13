@@ -17,9 +17,10 @@ export default function Home() {
           width={200}
         />
       </a>
+            {/* Footer (no need to enclose again) */}
+      <Footer />
     </main>
 
-{/* Footer (no need to enclose again) */}
-      <Footer />
+
   );
 }
