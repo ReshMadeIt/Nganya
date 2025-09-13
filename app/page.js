@@ -10,10 +10,10 @@ export default function Home() {
         rel="noopener noreferrer"
       >
         <img
-          src="/google-play.png"
-          alt="Get it on Google Play"
-          width={200}
-        />
+    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+    alt="Google Play"
+    className="w-6 h-6"
+  />
       </a>
     </main>
 
