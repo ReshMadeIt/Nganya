@@ -22,6 +22,14 @@ export default function Home() {
       }}
     >
 
+      {/* ✅ Load AdSense script the React/Next.js way */}
+      <Script
+        id="adsbygoogle-init"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898929858071696"
+        crossOrigin="anonymous"
+      />
+
       <img
         src="/nganyaa.png" // keep your app icon in /public/nganyaa.png
         alt="Nganya App Icon"
@@ -49,18 +57,21 @@ export default function Home() {
         />
       </a>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898929858071696"
-     crossorigin="anonymous"></script>
-<!-- Home Landing -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7898929858071696"
-     data-ad-slot="3462861886"
+  {/* ✅ AdSense ad unit */}
+      <div style={{ marginTop: "40px" }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-7898929858071696"
+          data-ad-slot="3462861886"
      data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
+
+      <Script id="adsbygoogle-push">{`
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      `}</Script>
          
     </main>
   );
