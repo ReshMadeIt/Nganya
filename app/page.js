@@ -1,6 +1,19 @@
 export default function Home() {
   return (
     <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "50px" }}>
+
+<img
+        src="/nganyaa.png" // keep your app icon in /public/nganya.png
+        alt="Nganya App Icon"
+        style={{
+          width: "150px",         // bigger size
+          height: "150px",
+          borderRadius: "50%",    // makes it perfectly round
+          marginBottom: "20px",
+          objectFit: "cover",     // keeps aspect ratio nice inside circle
+        }}
+      />
+  
       <h1>Nganya 🚐</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
 
