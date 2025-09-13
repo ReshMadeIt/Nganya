@@ -8,7 +8,7 @@ export default function Home() {
         style={{
           width: "150px",         // bigger size
           height: "150px",
-          borderRadius: "50%",    // makes it perfectly round
+          borderRadius: "20%",    // makes it perfectly round
           marginBottom: "20px",
           objectFit: "cover",     // keeps aspect ratio nice inside circle
         }}
