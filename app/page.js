@@ -22,13 +22,13 @@ export default function Home() {
       }}
     >
 
-      {/* ✅ Load AdSense script the React/Next.js way */}
       <Script
-        id="adsbygoogle-init"
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898929858071696"
-        crossOrigin="anonymous"
-      />
+  id="adsbygoogle-init"
+  strategy="afterInteractive"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898929858071696"
+  crossOrigin="anonymous"
+/>
 
       <img
         src="/nganyaa.png" // keep your app icon in /public/nganyaa.png
