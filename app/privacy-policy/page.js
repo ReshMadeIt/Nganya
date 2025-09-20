@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
       <p>We show ads and interstitials. Ad providers may collect device identifiers.</p>
 
       <h2>3. Contact</h2>
-      <p>Email: <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a></p>
+      <p>Email: <a href="mailto:reshmadeiy@gmail.com">reshmadeiy@gmail.com</a></p>
 
       <hr />
       <small>Last updated: 2025-09-20</small>
