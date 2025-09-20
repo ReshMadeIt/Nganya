@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nganya.mobile",
+      "sha256_cert_fingerprints": [
+        "BF:B7:44:19:0B:C1:4A:12:75:A0:5C:3D:E9:A6:3C:31:50:B0:35:16:D6:0C:57:8E:06:A2:E3:75:66:DF:55:B6"
+      ]
+    }
+  }
+]
