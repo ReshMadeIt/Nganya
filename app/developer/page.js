@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Developer",
+};
+
 // app/page.js
 export default function Home() {
   return (
