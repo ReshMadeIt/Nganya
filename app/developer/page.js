@@ -1,7 +1,6 @@
 export const metadata = {
   title: "Developer",
 };
-
 // app/page.js
 export default function Home() {
   return (
@@ -55,3 +54,11 @@ export default function Home() {
         >
           Email Me
         </a>
+      </section>
+
+      <footer className="mt-16 text-sm text-gray-500 text-center">
+        © {new Date().getFullYear()} ReshMadeIt. All rights reserved.
+      </footer>
+    </main>
+  );
+}
