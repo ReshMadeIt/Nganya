@@ -5,9 +5,13 @@ import { useEffect } from "react";
 import Script from "next/script";
 
 export default function Home() {
-  const { count } = await supabase
-    .from('matatus')
-    .select('*', { count: 'exact', head: true })
+  const { count, error } = await supabase
+    .from("matatus")
+    .select("*", { count: "exact", head: true })
+
+  if (error) {
+    console.error(error)
+  }
   useEffect(() => {
     // Dynamically add Google Fonts link
     const link = document.createElement("link");
