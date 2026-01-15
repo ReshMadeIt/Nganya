@@ -1,9 +1,13 @@
 "use client";
 
+import { supabase } from '@/lib/supabase'
 import { useEffect } from "react";
 import Script from "next/script";
 
 export default function Home() {
+  const { count } = await supabase
+    .from('matatus')
+    .select('*', { count: 'exact', head: true })
   useEffect(() => {
     // Dynamically add Google Fonts link
     const link = document.createElement("link");
@@ -36,6 +40,7 @@ export default function Home() {
 
       <h1>Nganya</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
+        <p>{count ?? 0} matatus mapped</p>
 
       <a
         href="https://play.google.com/store/apps/details?id=com.nganya.mobile"
