@@ -1,8 +1,7 @@
 "use client";
 
-import { supabase } from 'lib/supabase'
+import { supabase } from "@/lib/supabase"
 import { useEffect } from "react";
-import Script from "next/script";
 
 export default function Home() {
   const { count, error } = await supabase
