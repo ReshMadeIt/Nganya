@@ -1,8 +1,5 @@
 
 export default async function Home() {
-  
-  if (error) console.error(error);
-
   return (
     <main style={{ fontFamily: "sans-serif", textAlign: "center", padding: "50px" }}>
       <img
