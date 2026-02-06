@@ -29,6 +29,8 @@ export default function Home() {
         src="https://platform.linkedin.com/badges/js/profile.js"
         strategy="afterInteractive"
       />
+          <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="reshley-atsiaya" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ke.linkedin.com/in/reshley-atsiaya?trk=profile-badge">Reshley Atsiaya</a></div>
+              
 
       <a
         href="https://play.google.com/store/apps/details?id=com.nganya.mobile"
