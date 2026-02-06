@@ -1,10 +1,6 @@
-import { supabase } from "../lib/supabase";
 
 export default async function Home() {
-  const { count, error } = await supabase
-    .from("matatus")
-    .select("*", { count: "exact", head: true });
-
+  
   if (error) console.error(error);
 
   return (
@@ -16,7 +12,9 @@ export default async function Home() {
       />
       <h1>Nganya</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
-      <p>{count ?? 0} matatus mapped</p>
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+ 
       <a
         href="https://play.google.com/store/apps/details?id=com.nganya.mobile"
         target="_blank"
