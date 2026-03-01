@@ -1,4 +1,5 @@
 import Script from "next/script";
+import supabase from "@/lib/initSupabase";
 
 export default function Home() {
   return (
