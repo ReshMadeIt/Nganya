@@ -64,8 +64,10 @@ export default function Home() {
         src="https://platform.linkedin.com/badges/js/profile.js"
         strategy="afterInteractive"
       />
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="reshley-atsiaya" data-version="v1"><a class="badge-base[...] 
-              
+      <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="reshley-atsiaya" data-version="v1">
+        <a className="badge-base" href="https://linkedin.com/in/reshley-atsiaya?trk=profile-badge"></a>
+      </div>
+
       <a
         href="https://play.google.com/store/apps/details?id=com.nganya.mobile"
         target="_blank"
