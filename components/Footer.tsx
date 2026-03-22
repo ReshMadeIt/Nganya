@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { FaPhone, FaGlobe, FaEnvelope } from "react-icons/fa";
+import { FaPhone, FaGlobe } from "react-icons/fa";
+import React from "react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer
       style={{
         borderTop: "1px solid #ccc",
         padding: "1.5rem",
-        background: "#f9f9f9",
+        backgroundColor: "#f9f9f9",
       }}
     >
       <div
@@ -17,22 +18,25 @@ const Footer = () => {
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr",
           gap: "1rem",
-          alignItems: "start",
         }}
       >
         {/* CONTACT SECTION */}
         <div>
           <h4>Contact</h4>
 
-          <p style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <p style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <FaPhone />
             +254 759 183 060
           </p>
 
-          <p style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <p style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <FaGlobe />
-            <a href="https://reshmadeit.vercel.app" target="_blank">
-              My Website
+            <a
+              href="https://reshmadeit.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              My website
             </a>
           </p>
         </div>
@@ -48,10 +52,11 @@ const Footer = () => {
               type="email"
               id="email"
               name="email"
+              required
               style={{
                 display: "block",
-                marginTop: "6px",
-                padding: "6px",
+                marginTop: 6,
+                padding: 6,
                 width: "100%",
               }}
             />
@@ -59,7 +64,7 @@ const Footer = () => {
             <button
               type="submit"
               style={{
-                marginTop: "8px",
+                marginTop: 8,
                 padding: "6px 12px",
                 cursor: "pointer",
               }}
@@ -69,10 +74,9 @@ const Footer = () => {
           </form>
         </div>
 
-        {/* LINKS */}
+        {/* LEGAL LINKS */}
         <div>
           <h4>Legal</h4>
-
           <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
       </div>
