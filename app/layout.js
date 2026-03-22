@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next';
 import Navbar from '../components/Navbar';
-import Navbar from '../components/Footer';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: "Nganya",
