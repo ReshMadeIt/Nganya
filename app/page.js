@@ -1,15 +1,30 @@
 'use client';
 
 import Script from "next/script";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import supabase from '@/utils/supabase'; // Adjust this path to where your client is
 
 export default function Home() {
-  const [newsCount, setNewsCount] = useState(0);
-  const [loading, setLoading] = useState(true);
 
-  // We attempt to fetch one row from any table (e.g., 'posts') to test the link
-  const { data, error } = await supabase.from('posts').select('*').limit(1);
+  const [status, setStatus] = useState('Checking connection...');
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function checkConnection() {
+      // We attempt to fetch one row from any table to test the link
+      const { data, error } = await supabase.from('news').select('*').limit(3);
+      
+      if (error) {
+        setError(error.message);
+        setStatus('Error');
+      } else {
+        setStatus('Working! Successfully connected to Supabase.');
+      }
+    }
+
+    checkConnection();
+  }, []);
+
 
   return (
     <main
@@ -34,22 +49,15 @@ export default function Home() {
       <h1>Nganya</h1>
       <p>Your ultimate matatu culture app – now on Google Play!</p>
       
-      {/* News Count Display */}
-      <p style={{ marginTop: "20px", fontSize: "16px", color: "#666" }}>
-        {loading ? "Loading..." : `Latest News: ${newsCount} articles`}
-      </p>
 
-
-<h1>Connection Status:</h1>
+<h1>Supabase Status:</h1>
       {error ? (
-        <p style={{ color: 'red' }}>❌ Error: {er>
+        <p style={{ color: 'red' }}>❌ {status}: {error}</p>
       ) : (
-        <p style={{ color: 'green' }}>✅ Working!>
+        <p style={{ color: status.includes('Working') ? 'green' : 'orange' }}>
+          {status.includes('Working') ? '✅' : '⏳'} {status}
+        </p>
       )}
-
-      {/* Optional: Show the actual data for deep> */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-
 
       {/* LinkedIn script */}
       <Script
