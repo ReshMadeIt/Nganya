@@ -2,10 +2,14 @@
 
 import Script from "next/script";
 import { useState, useEffect } from "react";
+import supabase from '@/utils/supabase'; // Adjust this path to where your client is
 
 export default function Home() {
   const [newsCount, setNewsCount] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  // We attempt to fetch one row from any table (e.g., 'posts') to test the link
+  const { data, error } = await supabase.from('posts').select('*').limit(1);
 
   return (
     <main
@@ -34,6 +38,18 @@ export default function Home() {
       <p style={{ marginTop: "20px", fontSize: "16px", color: "#666" }}>
         {loading ? "Loading..." : `Latest News: ${newsCount} articles`}
       </p>
+
+
+<h1>Connection Status:</h1>
+      {error ? (
+        <p style={{ color: 'red' }}>❌ Error: {er>
+      ) : (
+        <p style={{ color: 'green' }}>✅ Working!>
+      )}
+
+      {/* Optional: Show the actual data for deep> */}
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+
 
       {/* LinkedIn script */}
       <Script
