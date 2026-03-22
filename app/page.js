@@ -2,34 +2,10 @@
 
 import Script from "next/script";
 import { useState, useEffect } from "react";
-import supabase from "@/lib/supabase";
 
 export default function Home() {
   const [newsCount, setNewsCount] = useState(0);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchNewsCount = async () => {
-      try {
-        const { count, error } = await supabase
-          .from('news')
-          .select('*', { count: 'exact', head: true });
-
-        if (error) {
-          console.error('Error fetching news count:', error);
-          setNewsCount(0);
-        } else {
-          setNewsCount(count || 0);
-        }
-      } catch (err) {
-        console.error('Error:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchNewsCount();
-  }, []);
 
   return (
     <main
